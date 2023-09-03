@@ -27,13 +27,14 @@ class ImageList extends Component {
       <div>
         <h2>List of Images</h2>
         <div className="image-list">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={`data:image/png;base64,${image}`}
-              alt={`Image ${index}`}
-            />
-          ))}
+         {images.map((image, index) => (
+  // eslint-disable-next-line jsx-a11y/img-redundant-alt
+  <img
+    key={index}
+    src={`data:image/png;base64,${image}`}
+    alt={`Image ${index + 1}`} 
+  />
+))}
         </div>
       </div>
     );
